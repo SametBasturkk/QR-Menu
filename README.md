@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# QR Menu Management System - README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Welcome to the **QR Menu Management System**! This project provides a backend API service using Node.js, Express, Sequelize, and Multer for managing QR code menus. Users can upload, retrieve, update, and delete their menus. It uses PostgreSQL for the database and handles file uploads using Multer.
 
-## Available Scripts
+## Endpoints
+The QR Menu Management System offers the following API endpoints:
 
-In the project directory, you can run:
+1. `POST /api/users`: Registers a new user or updates an existing user's details in the `User` table.
 
-### `npm start`
+2. `POST /saveMenu`: Saves a new menu to the database by creating a new entry in the `Menu` table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. `POST /getMenu`: Retrieves a specific menu from the database based on the provided menu name and user ID.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. `POST /fileUpload`: Handles file uploads, organizing files by user ID in the `/uploads` directory.
 
-### `npm test`
+5. `POST /getMenuList`: Retrieves a list of menus associated with a specific user from the `Menu` table.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. `POST /deleteMenu`: Deletes a menu from the `Menu` table based on the provided menu name and user ID.
 
-### `npm run build`
+7. `POST /menuUpdateDb`: Retrieves a menu's details from the `Menu` table based on the provided menu name and user ID.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. `POST /updateMenu`: Placeholder endpoint for updating menu details (implementation missing).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Prerequisites
+- Ensure you have PostgreSQL installed and running, and the Node.js environment set up.
+- Set up the PostgreSQL connection details in the script.
